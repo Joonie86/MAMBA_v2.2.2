@@ -15,7 +15,7 @@ Following CFW is supported
 4.40 [CEX]
 4.41 [CEX] [DEX]
 4.46 [CEX] [DEX]
-4.50 [CEX]
+4.50 [CEX] [DEX]
 4.53 [CEX] [DEX]
 4.55 [CEX] [DEX]
 4.60 [CEX]
