@@ -1,14 +1,28 @@
 'Mamba' is the payload version of Cobra code (developed by Cobra Team) CFW for Iris Manager with some limitations.
 
 
-Tested working in CFW 4.46 (Rogero v1.01) and CFW 4.53 Habib v1.01
+Following CFW is supported
+
+3.41 [CEX]
+3.55 [CEX] [DEX]
+4.21 [CEX] [DEX]
+4.30 [CEX]
+4.31 [CEX]
+4.40 [CEX]
+4.41 [CEX] [DEX]
+4.46 [CEX] [DEX]
+4.50 [CEX]
+4.53 [CEX] [DEX]
+4.55 [CEX] [DEX]
+4.60 [CEX]
+4.65 [CEX]
 
 
 Some differences with Cobra:
 
 
 
-1) Mamba don´t support emulators: Iris Manager have your own method for PS1 ISOS
+1) Mamba donÂ´t support emulators: Iris Manager have your own method for PS1 ISOS
 
 
 
@@ -23,7 +37,7 @@ Code is protected from vsh_process NULL condition.
 
 
 
-4) Spoof functions are disabled from 4.53: iris Manager don´t support spoof method
+4) Spoof functions are disabled from 4.53: iris Manager donÂ´t support spoof method
 
 
 
@@ -46,14 +60,14 @@ To port to others CFW:
 
 - This code is released under GPL v3. Please, release your changes!
 
-- Surely it don´t work without some changes for CFW < 4.46 (untested)
+- Surely it donÂ´t work without some changes for CFW < 4.46 (untested)
 
 - USE_LV1_PEEK_POKE must be disabled is you are using an the old LV1 access (CFW 3.55)
 
-- lv2/symbols.h countain the symbols to be defined from LV2 for the payload. 'FIRMWARE_4_53' countain the basic offsets to works
+- lv2/symbols.h countain the symbols to be defined from LV2 for the payload. 'FIRMWARE_4_65' countain the basic offsets to works
 and the code are adapted to it
 
-- stage2/modulespatch.h countain patches to do in modules from the payload. 'FIRMWARE_4_53'  define this patches to 0 for disable it (as you can see).
+- stage2/modulespatch.h countain patches to do in modules from the payload. 'FIRMWARE_4_65'  define this patches to 0 for disable it (as you can see).
 
 NOTE: Surely some patches from Cobra cannot be done if you enable it: you are working after VSH.SELF is loaded.
 Others patches can be done dinamically and it can work if you enable it, of course, pero some patches are done from other methods in the CFW
