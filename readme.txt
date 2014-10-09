@@ -1,5 +1,9 @@
 'Mamba' is the payload version of Cobra code (developed by Cobra Team) CFW for Iris Manager with some limitations.
 
+Originally created by @Estwald, and ported by many ps3 scene developers.
+
+Special thanks to Estwald, Habib, Evilnat, rancid-0 and many devs that are anonymous 
+
 
 Following CFW is supported
 
