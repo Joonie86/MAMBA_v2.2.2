@@ -25,6 +25,13 @@ enum
 
 void region_patches(void);
 
+#ifdef PS3M_API
+
+void unhook_all_region(void);
+
 #endif
+
+#endif
+
 
 

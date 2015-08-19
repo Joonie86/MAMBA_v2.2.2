@@ -105,7 +105,7 @@ LV2_EXPORT int storage_unmap_io_memory(uint64_t device, void *buf);
 
 static INLINE uint64_t storage_get_flash_device(void)
 {
-	uint64_t value, v2;
+	u64 value, v2;
 	
 	lv1_get_repository_node_value(PS3_LPAR_ID_PME, FIELD_FIRST("sys", 0), FIELD("flash", 0), FIELD("ext", 0), 0, &value, &v2);
 	

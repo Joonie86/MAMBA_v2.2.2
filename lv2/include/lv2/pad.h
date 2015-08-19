@@ -2,7 +2,7 @@
 #define __LV2_PAD_H__
 
 #include <stdint.h>
-//#include <sys/types.h>
+#include <sys/types.h>
 #include <lv2/lv2.h>
 
 // Note values in this file are different than user mode functions

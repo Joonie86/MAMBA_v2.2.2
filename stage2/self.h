@@ -3,8 +3,8 @@
 
 #include <stdint.h>
 
-#define SCE_MAGIC 		0x53434500
-#define ELF_MAGIC		0x7F454C46
+//#define SCE_MAGIC 		0x53434500
+//#define ELF_MAGIC		0x7F454C46
 #define SPRX_EXT_MAGIC		0x6F8A81B0879A3200ULL
 #define SPRX_EXT_MAGIC2		0x4A52A57F5957E800ULL
 #define SPRX_EXT_MAGIC_MASK	0xFFFFFFFFFFFFFF00ULL
@@ -29,15 +29,16 @@ typedef struct {
   uint64_t padding;
 } __attribute__((packed)) SELF;
 
-typedef struct {
+/* typedef struct {
   uint64_t authid; // 0
   uint32_t vendor_id; // 8
   uint32_t self_type; // c
   uint32_t version; // 10
   uint8_t padding[12];
 } __attribute__((packed)) APP_INFO;
-
-typedef struct {
+ */
+ 
+/* typedef struct {
   uint32_t magic;
   uint8_t ident[12];
   uint16_t type;
@@ -53,9 +54,9 @@ typedef struct {
   uint16_t shent_size;
   uint16_t shnum;
   uint16_t shstrndx;
-} __attribute__((packed)) ELF;
+} __attribute__((packed)) ELF; */
 
-typedef struct {
+/* typedef struct {
   uint32_t type;
   uint32_t flags;
   uint64_t offset_in_file;
@@ -65,8 +66,8 @@ typedef struct {
   uint64_t segment_mem_size;
   uint64_t alignment;
 } __attribute__((packed)) ELF_PHDR;
-
-typedef struct {
+ */
+/* typedef struct {
   uint32_t name_idx;
   uint32_t type;
   uint64_t flags;
@@ -77,25 +78,25 @@ typedef struct {
   uint32_t info;
   uint64_t addr_align;
   uint64_t entry_size;
-} __attribute__((packed)) ELF_SHDR;
+} __attribute__((packed)) ELF_SHDR; */
 
-typedef struct {
+/* typedef struct {
   uint64_t offset;
   uint64_t size;
   uint32_t compressed; // 2=compressed
   uint32_t unknown1;
   uint32_t unknown2;
   uint32_t encrypted; // 1=encrypted
-} __attribute__((packed)) SECTION_INFO;
+} __attribute__((packed)) SECTION_INFO; */
 
-typedef struct {
+/* typedef struct {
   uint32_t unknown1;
   uint32_t unknown2;
   uint32_t unknown3;
   uint32_t unknown4;
-} __attribute__((packed)) SCEVERSION_INFO;
+} __attribute__((packed)) SCEVERSION_INFO; */
 
-typedef struct {
+/* typedef struct {
   uint32_t type; // 1==control flags; 2==file digest        0
   uint32_t size; // 4
   union {
@@ -113,27 +114,27 @@ typedef struct {
       uint8_t padding[8]; // 38
     } file_digest;
   };
-} __attribute__((packed)) CONTROL_INFO;
+} __attribute__((packed)) CONTROL_INFO; */
 
 
-typedef struct {
+/* typedef struct {
   //uint8_t ignore[32];
   uint8_t key[16];
   uint8_t key_pad[16];
   uint8_t iv[16];
   uint8_t iv_pad[16];
-} __attribute__((packed)) METADATA_INFO;
+} __attribute__((packed)) METADATA_INFO; */
 
-typedef struct {
+/* typedef struct {
   uint64_t signature_input_length;
   uint32_t unknown1;
   uint32_t section_count;
   uint32_t key_count;
   uint32_t signature_info_size;
   uint64_t unknown2;
-} __attribute__((packed)) METADATA_HEADER;
+} __attribute__((packed)) METADATA_HEADER; */
 
-typedef struct {
+/* typedef struct {
   uint64_t data_offset;
   uint64_t data_size;
   uint32_t type; // 1 = shdr, 2 == phdr
@@ -144,15 +145,15 @@ typedef struct {
   uint32_t key_idx;
   uint32_t iv_idx;
   uint32_t compressed; // 2=yes; 1=no
-} __attribute__((packed)) METADATA_SECTION_HEADER;
+} __attribute__((packed)) METADATA_SECTION_HEADER; */
 
-typedef struct {
+/* typedef struct {
   uint8_t sha1[20];
   uint8_t padding[12];
   uint8_t hmac_key[64];
-} __attribute__((packed)) SECTION_HASH;
+} __attribute__((packed)) SECTION_HASH; */
 
-typedef struct {
+/* typedef struct {
   uint32_t unknown1;
   uint32_t signature_size;
   uint64_t unknown2;
@@ -161,20 +162,20 @@ typedef struct {
   uint64_t unknown5;
   uint32_t unknown6;
   uint32_t unknown7;
-} __attribute__((packed)) SIGNATURE_INFO;
+} __attribute__((packed)) SIGNATURE_INFO; */
 
-typedef struct {
+/* typedef struct {
   uint8_t r[21];
   uint8_t s[21];
   uint8_t padding[6];
-} __attribute__((packed)) SIGNATURE;
+} __attribute__((packed)) SIGNATURE; */
 
 
-typedef struct {
+/* typedef struct {
   uint8_t *data;
   uint64_t size;
   uint64_t offset;
-} SELF_SECTION;
+} SELF_SECTION; */
 
 
 typedef struct {

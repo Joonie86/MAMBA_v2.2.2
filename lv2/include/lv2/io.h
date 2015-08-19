@@ -2,7 +2,7 @@
 #define __LV2_IO_H__
 
 #include <stdint.h>
-//#include <sys/types.h>
+#include <sys/types.h>
 #include <lv2/lv2.h>
 #include <lv2/symbols.h>
 

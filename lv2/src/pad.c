@@ -13,7 +13,8 @@ int pad_get_data(pad_data *data)
 	
 	if (ret == 0xFFFFFFD8)
 	{
-		// USB failed, try BT now...
+		
+		//USB failed, try BT now...
 		
 		uint16_t len;
 		

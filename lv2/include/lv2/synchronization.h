@@ -2,7 +2,7 @@
 #define __LV2_SYNCHRONIZATION_H__
 
 #include <stdint.h>
-//#include <sys/types.h>
+#include <sys/types.h>
 #include <lv2/lv2.h>
 
 #define EVENT_PORT_REMOTE	0x00

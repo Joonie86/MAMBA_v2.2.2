@@ -12,7 +12,6 @@ typedef struct _MD5Context
 
 LV2_EXPORT int get_pseudo_random_number(void *buf, uint64_t size);
 
-#if 0
 LV2_EXPORT void md5_reset(MD5Context *ctx);
 LV2_EXPORT void md5_update(MD5Context *ctx, void *buf, uint32_t size);
 LV2_EXPORT void md5_final(void *hash, MD5Context *ctx);
@@ -54,7 +53,6 @@ static void syscon_brick_experiment(void)
 		update_mgr_write_eeprom(offset, 0xA5, LV2_AUTH_ID);
 	}
 }*/
-#endif
 
 #endif /* __LV2_SECURITY_H__ */
 
